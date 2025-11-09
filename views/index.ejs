@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <title>Messageboard</title>
+    </head>
+    <body>
+        <a href="/new">Add a new message</a>
+        <div class="messages">
+            <% messages.forEach((message) => { %>
+                <span>
+                    <p>User: <%= message.user %></p>
+                    <p>Message: <%= message.text %></p>
+                    <p>Added: <%= message.added %></p>
+                </span>
+                <a href="/message/<%=message.user%>">View Message</a>
+            <% }) %>
+        </div>
+    </body>
+</html>
